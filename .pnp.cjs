@@ -751,6 +751,10 @@ const RAW_RUNTIME_STATE =
       "npm:0.11.0"\
     ],\
     [\
+      "@remix-run/router",\
+      "npm:1.19.2"\
+    ],\
+    [\
       "@rollup/rollup-android-arm-eabi",\
       "npm:4.22.5"\
     ],\
@@ -1199,6 +1203,10 @@ const RAW_RUNTIME_STATE =
       "npm:1.0.2"\
     ],\
     [\
+      "chokidar",\
+      "npm:4.0.1"\
+    ],\
+    [\
       "chownr",\
       "npm:2.0.0"\
     ],\
@@ -1605,6 +1613,10 @@ const RAW_RUNTIME_STATE =
     [\
       "ignore",\
       "npm:5.3.2"\
+    ],\
+    [\
+      "immutable",\
+      "npm:4.3.7"\
     ],\
     [\
       "import-fresh",\
@@ -2175,6 +2187,18 @@ const RAW_RUNTIME_STATE =
       "npm:17.0.2"\
     ],\
     [\
+      "react-router",\
+      "virtual:4231b13f240f25559afaca94057fba0a18a9073e7af3de6df364a6b9aecceff9fd91d5b0af1538868ba815316744c58a9f283311d02e0d254794420532898f0a#npm:6.26.2"\
+    ],\
+    [\
+      "react-router-dom",\
+      "virtual:e0ffa0a6c256a51600c19dcf7b2278500761328a398f4dcde5dfce8acb952760e5c323891e5f461e99deb81c5b3d6901e889196d0eccabd033d26667966b6fdc#npm:6.26.2"\
+    ],\
+    [\
+      "readdirp",\
+      "npm:4.0.1"\
+    ],\
+    [\
       "redent",\
       "npm:3.0.0"\
     ],\
@@ -2245,6 +2269,10 @@ const RAW_RUNTIME_STATE =
     [\
       "safer-buffer",\
       "npm:2.1.2"\
+    ],\
+    [\
+      "sass",\
+      "npm:1.79.4"\
     ],\
     [\
       "saxes",\
@@ -6405,6 +6433,15 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["@remix-run/router", [\
+      ["npm:1.19.2", {\
+        "packageLocation": "../../.yarn/berry/cache/@remix-run-router-npm-1.19.2-3b51b8b09c-10c0.zip/node_modules/@remix-run/router/",\
+        "packageDependencies": [\
+          ["@remix-run/router", "npm:1.19.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["@rollup/rollup-android-arm-eabi", [\
       ["npm:4.22.5", {\
         "packageLocation": "./.yarn/unplugged/@rollup-rollup-android-arm-eabi-npm-4.22.5-799baaa1ef/node_modules/@rollup/rollup-android-arm-eabi/",\
@@ -7939,6 +7976,16 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["chokidar", [\
+      ["npm:4.0.1", {\
+        "packageLocation": "../../.yarn/berry/cache/chokidar-npm-4.0.1-989df9ae3c-10c0.zip/node_modules/chokidar/",\
+        "packageDependencies": [\
+          ["chokidar", "npm:4.0.1"],\
+          ["readdirp", "npm:4.0.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["chownr", [\
       ["npm:2.0.0", {\
         "packageLocation": "../../.yarn/berry/cache/chownr-npm-2.0.0-638f1c9c61-10c0.zip/node_modules/chownr/",\
@@ -8928,6 +8975,8 @@ const RAW_RUNTIME_STATE =
           ["jest-svg-transformer", "virtual:e0ffa0a6c256a51600c19dcf7b2278500761328a398f4dcde5dfce8acb952760e5c323891e5f461e99deb81c5b3d6901e889196d0eccabd033d26667966b6fdc#npm:1.0.0"],\
           ["react", "npm:18.3.1"],\
           ["react-dom", "virtual:d753968e3afce18cb154fb46dd9f42f6a87ea07e78c5c8a31c6692697bea3453da5d2f6d21f425403c2e2d85aaeca36653efb7b08f4665743ae8df1c34b0cbae#npm:18.3.1"],\
+          ["react-router-dom", "virtual:e0ffa0a6c256a51600c19dcf7b2278500761328a398f4dcde5dfce8acb952760e5c323891e5f461e99deb81c5b3d6901e889196d0eccabd033d26667966b6fdc#npm:6.26.2"],\
+          ["sass", "npm:1.79.4"],\
           ["ts-jest", "virtual:e0ffa0a6c256a51600c19dcf7b2278500761328a398f4dcde5dfce8acb952760e5c323891e5f461e99deb81c5b3d6901e889196d0eccabd033d26667966b6fdc#npm:29.2.5"],\
           ["ts-node", "virtual:e0ffa0a6c256a51600c19dcf7b2278500761328a398f4dcde5dfce8acb952760e5c323891e5f461e99deb81c5b3d6901e889196d0eccabd033d26667966b6fdc#npm:10.9.2"],\
           ["typescript", "patch:typescript@npm%3A5.6.2#optional!builtin<compat/typescript>::version=5.6.2&hash=8c6c40"],\
@@ -9244,6 +9293,15 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../.yarn/berry/cache/ignore-npm-5.3.2-346d3ba017-10c0.zip/node_modules/ignore/",\
         "packageDependencies": [\
           ["ignore", "npm:5.3.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["immutable", [\
+      ["npm:4.3.7", {\
+        "packageLocation": "../../.yarn/berry/cache/immutable-npm-4.3.7-a76ac3621b-10c0.zip/node_modules/immutable/",\
+        "packageDependencies": [\
+          ["immutable", "npm:4.3.7"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -11134,6 +11192,66 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["react-router", [\
+      ["npm:6.26.2", {\
+        "packageLocation": "../../.yarn/berry/cache/react-router-npm-6.26.2-3f4f7686d6-10c0.zip/node_modules/react-router/",\
+        "packageDependencies": [\
+          ["react-router", "npm:6.26.2"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:4231b13f240f25559afaca94057fba0a18a9073e7af3de6df364a6b9aecceff9fd91d5b0af1538868ba815316744c58a9f283311d02e0d254794420532898f0a#npm:6.26.2", {\
+        "packageLocation": "./.yarn/__virtual__/react-router-virtual-a1c8148616/3/.yarn/berry/cache/react-router-npm-6.26.2-3f4f7686d6-10c0.zip/node_modules/react-router/",\
+        "packageDependencies": [\
+          ["react-router", "virtual:4231b13f240f25559afaca94057fba0a18a9073e7af3de6df364a6b9aecceff9fd91d5b0af1538868ba815316744c58a9f283311d02e0d254794420532898f0a#npm:6.26.2"],\
+          ["@remix-run/router", "npm:1.19.2"],\
+          ["@types/react", "npm:18.3.10"],\
+          ["react", "npm:18.3.1"]\
+        ],\
+        "packagePeers": [\
+          "@types/react",\
+          "react"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["react-router-dom", [\
+      ["npm:6.26.2", {\
+        "packageLocation": "../../.yarn/berry/cache/react-router-dom-npm-6.26.2-f8b4afffaf-10c0.zip/node_modules/react-router-dom/",\
+        "packageDependencies": [\
+          ["react-router-dom", "npm:6.26.2"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:e0ffa0a6c256a51600c19dcf7b2278500761328a398f4dcde5dfce8acb952760e5c323891e5f461e99deb81c5b3d6901e889196d0eccabd033d26667966b6fdc#npm:6.26.2", {\
+        "packageLocation": "./.yarn/__virtual__/react-router-dom-virtual-4231b13f24/3/.yarn/berry/cache/react-router-dom-npm-6.26.2-f8b4afffaf-10c0.zip/node_modules/react-router-dom/",\
+        "packageDependencies": [\
+          ["react-router-dom", "virtual:e0ffa0a6c256a51600c19dcf7b2278500761328a398f4dcde5dfce8acb952760e5c323891e5f461e99deb81c5b3d6901e889196d0eccabd033d26667966b6fdc#npm:6.26.2"],\
+          ["@remix-run/router", "npm:1.19.2"],\
+          ["@types/react", "npm:18.3.10"],\
+          ["@types/react-dom", "npm:18.3.0"],\
+          ["react", "npm:18.3.1"],\
+          ["react-dom", "virtual:d753968e3afce18cb154fb46dd9f42f6a87ea07e78c5c8a31c6692697bea3453da5d2f6d21f425403c2e2d85aaeca36653efb7b08f4665743ae8df1c34b0cbae#npm:18.3.1"],\
+          ["react-router", "virtual:4231b13f240f25559afaca94057fba0a18a9073e7af3de6df364a6b9aecceff9fd91d5b0af1538868ba815316744c58a9f283311d02e0d254794420532898f0a#npm:6.26.2"]\
+        ],\
+        "packagePeers": [\
+          "@types/react-dom",\
+          "@types/react",\
+          "react-dom",\
+          "react"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["readdirp", [\
+      ["npm:4.0.1", {\
+        "packageLocation": "../../.yarn/berry/cache/readdirp-npm-4.0.1-17b55c8032-10c0.zip/node_modules/readdirp/",\
+        "packageDependencies": [\
+          ["readdirp", "npm:4.0.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["redent", [\
       ["npm:3.0.0", {\
         "packageLocation": "../../.yarn/berry/cache/redent-npm-3.0.0-31892f4906-10c0.zip/node_modules/redent/",\
@@ -11333,6 +11451,18 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../.yarn/berry/cache/safer-buffer-npm-2.1.2-8d5c0b705e-10c0.zip/node_modules/safer-buffer/",\
         "packageDependencies": [\
           ["safer-buffer", "npm:2.1.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["sass", [\
+      ["npm:1.79.4", {\
+        "packageLocation": "../../.yarn/berry/cache/sass-npm-1.79.4-fa344ddaab-10c0.zip/node_modules/sass/",\
+        "packageDependencies": [\
+          ["sass", "npm:1.79.4"],\
+          ["chokidar", "npm:4.0.1"],\
+          ["immutable", "npm:4.3.7"],\
+          ["source-map-js", "npm:1.2.1"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -12113,7 +12243,7 @@ const RAW_RUNTIME_STATE =
           ["lightningcss", null],\
           ["postcss", "npm:8.4.47"],\
           ["rollup", "npm:4.22.5"],\
-          ["sass", null],\
+          ["sass", "npm:1.79.4"],\
           ["stylus", null],\
           ["sugarss", null],\
           ["terser", null]\
