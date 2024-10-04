@@ -5,6 +5,10 @@
       "package/*"
     ]
   },
+  "scripts": {
+    "dev": "cd package && cd front && yarn dev",
+    "test": "cd package && cd front && yarn test"
+  },
   "packageManager": "yarn@4.5.0",
   "dependencies": {
     "react": "^18.3.1",
