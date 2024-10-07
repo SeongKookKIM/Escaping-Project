@@ -5,7 +5,7 @@ import { Route, Routes } from "react-router-dom";
 
 function App() {
   return (
-    <main>
+    <main className="main">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/admission" element={<Admission />} />

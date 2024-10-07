@@ -1,0 +1,24 @@
+@import "../../Shared/Style/flex.scss";
+@import "../../Shared/Style/font.scss";
+
+.header {
+  width: 100%;
+  @include flexCenterH();
+  height: 90px;
+  position: relative;
+
+  .backBtn {
+    background-color: white;
+    border: none;
+    font-size: $fontSize;
+    position: absolute;
+    left: 20px;
+    cursor: pointer;
+    color: black;
+  }
+
+  h3 {
+    font-size: $fontSize;
+    pointer-events: none;
+  }
+}

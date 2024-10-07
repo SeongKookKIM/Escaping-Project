@@ -12,7 +12,7 @@ jest.mock("react-router-dom", () => ({
 }));
 
 describe("Home Component", () => {
-  test('navigates to "/admission" when the "시작하기" button is clicked', async () => {
+  test("시작하기 버튼 클릭 시 admission페이지 이동 테스트", async () => {
     const user = userEvent.setup();
 
     // Home 컴포넌트 렌더링

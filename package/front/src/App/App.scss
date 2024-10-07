@@ -1,5 +1,9 @@
 @import "../Shared/Style/flex.scss";
 @import "../Shared//Style/color.scss";
+@import "../Shared/Style/font.scss";
+@import "../Shared//Style/mediaQuery.scss";
+
+@import "../Pages/Home/Home.module.scss";
 
 * {
   margin: 0;
@@ -23,16 +27,27 @@ input {
 
 body {
   width: 100%;
-  @include flexCenterH();
+  height: 100vh;
+  min-height: 600px;
+  overflow-y: scroll;
   background-color: $mainColor;
 }
 
-main {
-  width: 100vw;
+.main {
+  width: 100%;
   max-width: 720px;
   min-width: 350px;
-  height: 100vh;
+  height: 100%;
   background-color: white;
   border-left: 1px solid lightgray;
   border-right: 1px solid lightgray;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  margin: 0 auto;
+
+  @include homeStyles;
+
+  @include tablet() {
+    border: none;
+  }
 }
