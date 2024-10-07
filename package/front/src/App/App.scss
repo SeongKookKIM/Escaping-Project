@@ -1,9 +1,38 @@
+@import "../Shared/Style/flex.scss";
+@import "../Shared//Style/color.scss";
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Chrome, Safari, Edge, Opera -> Input Number Box */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Input 사파리 및 IOS Radius 초기화 */
+input {
+  -webkit-appearance: none;
+  appearance: none;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+
 body {
-  background-color: red;
+  width: 100%;
+  @include flexCenterH();
+  background-color: $mainColor;
+}
+
+main {
+  width: 100vw;
+  max-width: 720px;
+  min-width: 350px;
+  height: 100vh;
+  background-color: white;
+  border-left: 1px solid lightgray;
+  border-right: 1px solid lightgray;
 }
