@@ -2,7 +2,8 @@
   "roots": ["<rootDir>"],
   "testEnvironment": "jsdom",
   "moduleNameMapper": {
-    "\\.(css|less|svg)$": "identity-obj-proxy"
+    "\\.(css|less|scss|sass)$": "identity-obj-proxy",
+    "\\.(jpg|jpeg|png|gif|webp|svg)$": "<rootDir>/src/test/fileMock.ts"
   },
   "setupFilesAfterEnv": ["<rootDir>/src/test/jest-setup.ts"],
   "transform": {

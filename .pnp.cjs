@@ -987,6 +987,10 @@ const RAW_RUNTIME_STATE =
       "npm:15.7.13"\
     ],\
     [\
+      "@types/punycode",\
+      "npm:2.1.4"\
+    ],\
+    [\
       "@types/react",\
       "npm:18.3.10"\
     ],\
@@ -2610,8 +2614,11 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./",\
         "packageDependencies": [\
           ["@types/aria-query", "npm:5.0.4"],\
+          ["@types/node", "npm:22.7.4"],\
+          ["@types/punycode", "npm:2.1.4"],\
           ["@types/react", "npm:18.3.10"],\
           ["@types/react-dom", "npm:18.3.0"],\
+          ["punycode", "npm:2.3.1"],\
           ["react", "npm:18.3.1"],\
           ["react-dom", "virtual:d753968e3afce18cb154fb46dd9f42f6a87ea07e78c5c8a31c6692697bea3453da5d2f6d21f425403c2e2d85aaeca36653efb7b08f4665743ae8df1c34b0cbae#npm:18.3.1"],\
           ["supports-color", "npm:9.4.0"],\
@@ -7060,6 +7067,15 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["@types/punycode", [\
+      ["npm:2.1.4", {\
+        "packageLocation": "../../.yarn/berry/cache/@types-punycode-npm-2.1.4-e502a0736d-10c0.zip/node_modules/@types/punycode/",\
+        "packageDependencies": [\
+          ["@types/punycode", "npm:2.1.4"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["@types/react", [\
       ["npm:18.3.10", {\
         "packageLocation": "../../.yarn/berry/cache/@types-react-npm-18.3.10-0635fa9573-10c0.zip/node_modules/@types/react/",\
@@ -8530,8 +8546,11 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["escapingproject", "workspace:."],\
           ["@types/aria-query", "npm:5.0.4"],\
+          ["@types/node", "npm:22.7.4"],\
+          ["@types/punycode", "npm:2.1.4"],\
           ["@types/react", "npm:18.3.10"],\
           ["@types/react-dom", "npm:18.3.0"],\
+          ["punycode", "npm:2.3.1"],\
           ["react", "npm:18.3.1"],\
           ["react-dom", "virtual:d753968e3afce18cb154fb46dd9f42f6a87ea07e78c5c8a31c6692697bea3453da5d2f6d21f425403c2e2d85aaeca36653efb7b08f4665743ae8df1c34b0cbae#npm:18.3.1"],\
           ["supports-color", "npm:9.4.0"],\
@@ -8962,6 +8981,8 @@ const RAW_RUNTIME_STATE =
           ["@types/babel__preset-env", "npm:7.9.7"],\
           ["@types/identity-obj-proxy", "npm:3.0.2"],\
           ["@types/jest", "npm:29.5.13"],\
+          ["@types/node", "npm:22.7.4"],\
+          ["@types/punycode", "npm:2.1.4"],\
           ["@types/react", "npm:18.3.10"],\
           ["@types/react-dom", "npm:18.3.0"],\
           ["@vitejs/plugin-react-swc", "virtual:e0ffa0a6c256a51600c19dcf7b2278500761328a398f4dcde5dfce8acb952760e5c323891e5f461e99deb81c5b3d6901e889196d0eccabd033d26667966b6fdc#npm:3.7.0"],\
@@ -8973,6 +8994,7 @@ const RAW_RUNTIME_STATE =
           ["jest", "virtual:e0ffa0a6c256a51600c19dcf7b2278500761328a398f4dcde5dfce8acb952760e5c323891e5f461e99deb81c5b3d6901e889196d0eccabd033d26667966b6fdc#npm:29.7.0"],\
           ["jest-environment-jsdom", "virtual:e0ffa0a6c256a51600c19dcf7b2278500761328a398f4dcde5dfce8acb952760e5c323891e5f461e99deb81c5b3d6901e889196d0eccabd033d26667966b6fdc#npm:29.7.0"],\
           ["jest-svg-transformer", "virtual:e0ffa0a6c256a51600c19dcf7b2278500761328a398f4dcde5dfce8acb952760e5c323891e5f461e99deb81c5b3d6901e889196d0eccabd033d26667966b6fdc#npm:1.0.0"],\
+          ["punycode", "npm:2.3.1"],\
           ["react", "npm:18.3.1"],\
           ["react-dom", "virtual:d753968e3afce18cb154fb46dd9f42f6a87ea07e78c5c8a31c6692697bea3453da5d2f6d21f425403c2e2d85aaeca36653efb7b08f4665743ae8df1c34b0cbae#npm:18.3.1"],\
           ["react-router-dom", "virtual:e0ffa0a6c256a51600c19dcf7b2278500761328a398f4dcde5dfce8acb952760e5c323891e5f461e99deb81c5b3d6901e889196d0eccabd033d26667966b6fdc#npm:6.26.2"],\
@@ -11988,7 +12010,7 @@ const RAW_RUNTIME_STATE =
           ["@tsconfig/node12", "npm:1.0.11"],\
           ["@tsconfig/node14", "npm:1.0.3"],\
           ["@tsconfig/node16", "npm:1.0.4"],\
-          ["@types/node", null],\
+          ["@types/node", "npm:22.7.4"],\
           ["@types/swc__core", null],\
           ["@types/swc__wasm", null],\
           ["@types/typescript", null],\
@@ -12232,7 +12254,7 @@ const RAW_RUNTIME_STATE =
           ["vite", "virtual:e0ffa0a6c256a51600c19dcf7b2278500761328a398f4dcde5dfce8acb952760e5c323891e5f461e99deb81c5b3d6901e889196d0eccabd033d26667966b6fdc#npm:5.1.6"],\
           ["@types/less", null],\
           ["@types/lightningcss", null],\
-          ["@types/node", null],\
+          ["@types/node", "npm:22.7.4"],\
           ["@types/sass", null],\
           ["@types/stylus", null],\
           ["@types/sugarss", null],\
