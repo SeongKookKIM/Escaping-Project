@@ -11,7 +11,7 @@ jest.mock("react-router-dom", () => ({
   useNavigate: () => mockNavigate,
 }));
 
-describe("Home Component", () => {
+describe("Home Component Test", () => {
   test("시작하기 버튼 클릭 시 admission페이지 이동 테스트", async () => {
     const user = userEvent.setup();
 
