@@ -1,0 +1,17 @@
+@import "../../Shared/Style/flex.scss";
+
+.rooms {
+  width: 100%;
+  height: 100%;
+}
+.roomsContainer {
+  width: 100%;
+  @include flexCenterV();
+  .roomBox {
+    width: 100%;
+    min-height: 300px;
+    position: relative;
+    @include flexCenterH();
+    padding: 0 20px;
+  }
+}

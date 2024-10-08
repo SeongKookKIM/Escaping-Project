@@ -3,7 +3,8 @@
 
 .admission {
   width: 100%;
-  height: 100%;
+  height: 100vh;
+  min-height: 600px;
   position: relative;
   .admissionHint {
     width: 100%;

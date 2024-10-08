@@ -1,6 +1,6 @@
 import Home from "../Pages/\bHome/Home";
 import Admission from "../Pages/Admission/Admission";
-import Room from "../Pages/Room/Room";
+import Rooms from "../Pages/Rooms/Rooms";
 import "./App.scss";
 import { Route, Routes } from "react-router-dom";
 
@@ -10,7 +10,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/admission" element={<Admission />} />
-        <Route path="/room" element={<Room />} />
+        <Route path="/rooms" element={<Rooms />} />
       </Routes>
     </main>
   );

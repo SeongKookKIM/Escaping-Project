@@ -18,7 +18,7 @@ function Admission() {
       <div className={style.admissionContainer}>
         <div className={style.admissionBox}>
           <h4>입장 비밀번호</h4>
-          <Answer words={"0127"} navigation="room" />
+          <Answer words={"0127"} navigation="rooms" entryBtnName="입장하기" />
         </div>
         <p className={style.admissionDescription}>
           *본 게임은 개발자를 위한 방탈출 게임입니다.

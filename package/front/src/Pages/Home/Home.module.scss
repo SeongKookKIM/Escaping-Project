@@ -4,11 +4,16 @@
 
 .home {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   @include flexCenterV();
   justify-content: flex-start;
   padding-top: 5%;
-  overflow-y: hidden;
+  overflow-y: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  &::-webkit-scrollbar {
+    display: none;
+  }
   .logo {
     width: 20%;
     aspect-ratio: 1/1;

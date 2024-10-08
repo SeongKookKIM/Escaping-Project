@@ -3,7 +3,7 @@ import { wordsType } from "../../Entries/Answer/AnswerModel";
 import style from "./Answer.module.scss";
 import { useNavigate } from "react-router-dom";
 
-function Answer({ words, navigation }: wordsType) {
+function Answer({ words, navigation, entryBtnName }: wordsType) {
   const [values, setValues] = useState<string[]>(Array(words.length).fill(""));
   const [errorMessage, setErrorMessage] = useState<string>("");
   const inputsRef = useRef<(HTMLInputElement | null)[]>([]);
@@ -16,7 +16,7 @@ function Answer({ words, navigation }: wordsType) {
     index: number
   ) => {
     const newValues = [...values];
-    newValues[index] = e.target.value;
+    newValues[index] = e.target.value.slice(0, 1);
     setValues(newValues);
 
     // 글자 입력시 다음 input으로 이동
@@ -64,7 +64,7 @@ function Answer({ words, navigation }: wordsType) {
         <span className={style.answerErrorMessage}>{errorMessage}</span>
       )}
       <button type="submit" className={style.answerSubmitBtn}>
-        입장하기
+        {entryBtnName}
       </button>
     </form>
   );
