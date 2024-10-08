@@ -26,6 +26,20 @@ function Answer({ words, navigation, entryBtnName }: wordsType) {
     }
   };
 
+  // Input Backspace
+  const handleBackSpace = (
+    e: React.KeyboardEvent<HTMLInputElement>,
+    index: number
+  ) => {
+    if (
+      e.key === "Backspace" &&
+      !values[index] &&
+      inputsRef.current[index - 1]
+    ) {
+      inputsRef.current[index - 1]?.focus();
+    }
+  };
+
   // Input 생성
   const renderInputs = () => {
     const inputWidth = `${100 / words.length}%`;
@@ -38,6 +52,7 @@ function Answer({ words, navigation, entryBtnName }: wordsType) {
         value={values[index]}
         ref={(el) => (inputsRef.current[index] = el)}
         onChange={(e) => handleChange(e, index)}
+        onKeyDown={(e) => handleBackSpace(e, index)}
         style={{
           width: inputWidth,
         }}

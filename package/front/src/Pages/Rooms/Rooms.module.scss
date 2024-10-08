@@ -1,4 +1,6 @@
 @import "../../Shared/Style/flex.scss";
+@import "../../Shared/Style/font.scss";
+@import "../../Shared/Style/color.scss";
 
 .rooms {
   width: 100%;
@@ -13,5 +15,19 @@
     position: relative;
     @include flexCenterH();
     padding: 0 20px;
+
+    .answerSubmitBtn {
+      margin: 20px 0;
+      padding: 5px 15px;
+      background-color: white;
+      font-size: $fontSize;
+      color: black;
+      cursor: grab;
+      transition: background-color 0.5s, color 0.5s;
+      &:hover {
+        background-color: $mainColor;
+        color: black;
+      }
+    }
   }
 }
