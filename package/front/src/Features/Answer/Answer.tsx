@@ -2,6 +2,7 @@ import { useRef, useState } from "react";
 import { wordsType } from "../../Entries/Answer/AnswerModel";
 import style from "./Answer.module.scss";
 import { useNavigate } from "react-router-dom";
+import { loadData, saveData } from "../../Shared/Utils/LocalStorageHelpers";
 
 function Answer({ words, navigation, entryBtnName }: wordsType) {
   const [values, setValues] = useState<string[]>(Array(words.length).fill(""));
@@ -49,6 +50,10 @@ function Answer({ words, navigation, entryBtnName }: wordsType) {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (values.join("") === words) {
+      const correctAnswers = loadData("correctAnswers") || [];
+      correctAnswers.push(words);
+      saveData("correctAnswers", correctAnswers);
+
       navigate(`/${navigation}`);
     } else {
       setErrorMessage("*비밀번호가 일치하지 않습니다.");

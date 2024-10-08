@@ -1,5 +1,5 @@
 // 데이터 저장
-const saveData = (key: string, value: string) => {
+const saveData = (key: string, value: string[]) => {
   localStorage.setItem(key, JSON.stringify(value));
 };
 
@@ -18,3 +18,5 @@ const updateData = (key: string, newValue: string) => {
 const removeData = (key: string) => {
   localStorage.removeItem(key);
 };
+
+export { saveData, loadData, updateData, removeData };
