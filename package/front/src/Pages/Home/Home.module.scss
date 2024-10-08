@@ -1,69 +1,65 @@
-@mixin homeStyles {
-  .home {
-    width: 100%;
-    height: 100%;
-    @include flexCenterV();
-    justify-content: flex-start;
-    padding-top: 5%;
-    overflow-y: hidden;
+@import "../../Shared/Style/flex.scss";
+@import "../../Shared/Style/font.scss";
+@import "../../Shared//Style/color.scss";
 
-    .logo {
-      width: 20%;
-      aspect-ratio: 1 / 1;
+.home {
+  width: 100%;
+  height: 100%;
+  @include flexCenterV();
+  justify-content: flex-start;
+  padding-top: 5%;
+  overflow-y: hidden;
+  .logo {
+    width: 20%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+  }
+  .landingBgContainer {
+    width: 100%;
+    position: relative;
+    @include flexCenterV();
+    .landingBg {
+      width: 100%;
       object-fit: cover;
     }
-
-    .landingBgContainer {
-      width: 100%;
-      position: relative;
-      @include flexCenterV();
-
-      .landingBg {
-        width: 100%;
-        object-fit: cover;
-      }
-
-      p {
-        position: absolute;
-        bottom: 0;
-        text-align: center;
-        font-size: $fontSize;
-        font-weight: bold;
-        pointer-events: none;
-        line-height: 1.5;
-      }
-
-      &::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(
-          to bottom,
-          white 0%,
-          transparent 20%,
-          transparent 80%,
-          white 100%
-        );
-        pointer-events: none;
-      }
+    p {
+      position: absolute;
+      bottom: 0;
+      text-align: center;
+      font-size: $fontSize;
+      font-weight: bold;
+      pointer-events: none;
+      line-height: 1.5;
     }
 
-    .startBtn {
-      margin: 20px 0;
-      padding: 5px 15px;
-      font-size: $fontSize;
-      background-color: white;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        to bottom,
+        white 0%,
+        transparent 20%,
+        transparent 80%,
+        white 100%
+      );
+      pointer-events: none;
+    }
+  }
+  .startBtn {
+    margin: 20px 0;
+    padding: 5px 15px;
+    font-size: $fontSize;
+    background-color: white;
+    color: black;
+    cursor: grab;
+    transition: background-color 0.5s, color 0.5s;
+    &:hover {
+      background-color: $mainColor;
       color: black;
-      cursor: grab;
-      transition: background-color 0.5s, color 0.5s;
-
-      &:hover {
-        background-color: $mainColor;
-        color: black;
-      }
     }
   }
 }

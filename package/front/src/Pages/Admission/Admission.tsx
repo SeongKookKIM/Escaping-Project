@@ -1,9 +1,15 @@
+import { useEffect } from "react";
 import Answer from "../../Features/Answer/Answer";
 import Header from "../../Widgets/Header/Header";
 import style from "./Admisssion.module.scss";
 
 function Admission() {
-  console.log("헬로");
+  useEffect(() => {
+    console.log(
+      "입장 비밀번호는 '0127' 입니다. 앞으로의 방탈출 게임에서는 개발자 도구나 요소를 클릭하거나 드래그하여 힌트를 찾을 수 있습니다. 브라우저의 모든 요소와 검색을 통해 자유롭게 살펴보며 방탈출 게임을 진행해 주세요!"
+    );
+  }, []);
+
   return (
     <div className={style.admission}>
       <Header backBtn={false} />
@@ -12,7 +18,7 @@ function Admission() {
       <div className={style.admissionContainer}>
         <div className={style.admissionBox}>
           <h4>입장 비밀번호</h4>
-          <Answer words={"0127"} />
+          <Answer words={"0127"} navigation="room" />
         </div>
         <p className={style.admissionDescription}>
           *본 게임은 개발자를 위한 방탈출 게임입니다.

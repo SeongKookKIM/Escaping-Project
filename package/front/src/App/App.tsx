@@ -1,14 +1,16 @@
 import Home from "../Pages/\bHome/Home";
 import Admission from "../Pages/Admission/Admission";
+import Room from "../Pages/Room/Room";
 import "./App.scss";
 import { Route, Routes } from "react-router-dom";
 
 function App() {
   return (
-    <main className="main">
+    <main>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/admission" element={<Admission />} />
+        <Route path="/room" element={<Room />} />
       </Routes>
     </main>
   );

@@ -3,7 +3,7 @@
 
 .admission {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   position: relative;
   .admissionHint {
     width: 100%;
@@ -18,6 +18,14 @@
     padding: 20px 20px 50px;
     @include flexCenterV();
     gap: 150px;
+    .admissionBox {
+      width: 100%;
+      @include flexCenterV();
+      gap: 20px;
+      h4 {
+        font-size: 2rem;
+      }
+    }
     .admissionDescription {
       width: 100%;
       font-size: $fontSize;
