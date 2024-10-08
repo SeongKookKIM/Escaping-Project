@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Header from "../../Widgets/Header/Header";
 import style from "./Rooms.module.scss";
 import { wordsType } from "../../Entries/Answer/AnswerModel";
-import { roomsModel } from "../../Entries/Room/RoomModel";
+import { roomsModel } from "../../Entries/Rooms/RoomsModel";
 import Answer from "../../Features/Answer/Answer";
 import { useNavigate } from "react-router-dom";
 

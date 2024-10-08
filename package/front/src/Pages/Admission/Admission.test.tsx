@@ -18,7 +18,7 @@ describe("Admission Components Test", () => {
   const renderAnswer = () => {
     return render(
       <MemoryRouter>
-        <Answer words="0127" navigation="room" />
+        <Answer words="0127" navigation="room" entryBtnName="입장하기" />
       </MemoryRouter>
     );
   };
