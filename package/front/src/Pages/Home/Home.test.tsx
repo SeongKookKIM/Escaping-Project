@@ -12,23 +12,42 @@ jest.mock("react-router-dom", () => ({
 }));
 
 describe("Home Component Test", () => {
-  test("시작하기 버튼 클릭 시 admission페이지 이동 테스트", async () => {
-    const user = userEvent.setup();
-
-    // Home 컴포넌트 렌더링
-    render(
+  // Home 렌더링
+  const renderHome = () => {
+    return render(
       <MemoryRouter>
         <Home />
       </MemoryRouter>
     );
+  };
 
-    // 시작하기 버튼 찾기
+  test("correctAnswers에 0127이 포함되어 있으면 rooms 페이지로 이동", async () => {
+    const user = userEvent.setup();
+
+    // localStorage에 correctAnswers 저장
+    localStorage.setItem("correctAnswers", JSON.stringify(["0127"]));
+
+    renderHome();
+
     const startBtn = screen.getByRole("button", { name: /시작하기/i });
 
-    // 버튼 클릭 이벤트 발생
     await user.click(startBtn);
 
-    // navigate가 "/admission"으로 호출되는지 확인
+    expect(mockNavigate).toHaveBeenCalledWith("/rooms");
+  });
+
+  test("correctAnswers에 0127이 포함되어 있지 않으면 admission 페이지로 이동", async () => {
+    const user = userEvent.setup();
+
+    // localStorage에서 correctAnswers 제거
+    localStorage.removeItem("correctAnswers");
+
+    renderHome();
+
+    const startBtn = screen.getByRole("button", { name: /시작하기/i });
+
+    await user.click(startBtn);
+
     expect(mockNavigate).toHaveBeenCalledWith("/admission");
   });
 });
