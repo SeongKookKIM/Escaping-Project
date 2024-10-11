@@ -1,8 +1,14 @@
-export const roomInfo = [
+export type roomType = {
+  id: string;
+  content: string;
+  hint: string;
+};
+
+export const roomInfo: roomType[] = [
   {
     id: "room1",
     content: "Drag",
-    hint: "<html><head>문제</head></html>",
+    hint: "<html><head>Room1 문제</head></html>",
   },
   {
     id: "room2",
@@ -22,9 +28,8 @@ export const roomInfo = [
   },
   {
     id: "room5",
-    content:
-      "당신은 웹 애플리케이션을 개발하고 있습니다. 사용자가 버튼을 클릭하면 서버에서 데이터를 받아와 화면에 표시해야 합니다. 이 데이터 요청은 시간이 걸릴 수 있기 때문에, 데이터를 받아오는 동안 사용자 인터페이스가 멈추지 않고 다른 작업을 계속할 수 있어야 합니다. 이러한 상황에서 서버로부터 데이터를 받아오는 작업을 비동기적으로 처리하면서, 작업이 완료될 때까지 기다린 후 결과를 처리하고 싶습니다. 이를 위해 사용할 수 있는 JavaScript의 문법은 무엇입니까?",
-    hint: "기존의 비동기 처리 방식인 콜백 함수와 프로미스의 단점을 보완하고 코드 가독성을 좋게 만들어주는 비동기 처리 패턴입니다.",
+    content: "Cookie",
+    hint: "Encoding -> Decoding",
   },
   {
     id: "room6",

@@ -14,6 +14,7 @@ import room5 from "../../assets/room5-bg.png";
 import room6 from "../../assets/room6-bg.png";
 import room7 from "../../assets/room7-bg.png";
 import { loadData } from "../../Shared/Utils/LocalStorageHelpers";
+import { deleteCookie } from "../../Shared/Utils/CookieHelper";
 
 function Rooms() {
   const [rooms, setRooms] = useState<wordsType[]>([]);
@@ -26,6 +27,9 @@ function Rooms() {
 
     const saved: string[] = loadData("correctAnswers") || [];
     setSavedAnswers(saved);
+
+    deleteCookie("Room5_question");
+    deleteCookie("Room5_hint");
   }, []);
 
   return (
