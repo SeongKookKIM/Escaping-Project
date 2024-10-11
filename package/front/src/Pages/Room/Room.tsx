@@ -12,7 +12,6 @@ function Room() {
   const [roomThreeShow, setRoomThreeShow] = useState<boolean>(false);
   const [roomFourShow, setRoomFourShow] = useState<boolean>(false);
   const [roomSixShow, setRoomSixShow] = useState<boolean>(false);
-  console.log(roomSixShow);
 
   useEffect(() => {
     const findRoom = roomInfo.find((room) => room.id === roomId);

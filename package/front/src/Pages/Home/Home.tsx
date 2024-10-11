@@ -30,6 +30,7 @@ function Home() {
 
   return (
     <div className={style.home}>
+      <p className={style.roomSixPassword}>react</p>
       <img src={Logo} alt="Logo" className={style.logo} />
       <div className={style.landingBgContainer}>
         <img src={landingBg} alt="Landing-Bg" className={style.landingBg} />

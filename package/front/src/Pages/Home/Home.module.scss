@@ -11,9 +11,21 @@
   overflow-y: scroll;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
+  position: relative;
   &::-webkit-scrollbar {
     display: none;
   }
+
+  .roomSixPassword {
+    display: block;
+    position: absolute;
+    font-size: 4vw;
+    font-weight: bold;
+    top: 50px;
+    right: 20px;
+    color: white;
+  }
+
   .logo {
     width: 20%;
     aspect-ratio: 1/1;
