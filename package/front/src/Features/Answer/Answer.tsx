@@ -17,7 +17,7 @@ function Answer({ words, navigation, entryBtnName }: wordsType) {
     index: number
   ) => {
     const newValues = [...values];
-    newValues[index] = e.target.value.slice(0, 1);
+    newValues[index] = e.target.value.slice(0, 1).toLowerCase();
     setValues(newValues);
 
     // 글자 입력시 다음 input으로 이동
