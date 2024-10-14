@@ -8,8 +8,6 @@ export const checkPasswordMiddleware = (
 ) => {
   const checkPassword = loadData("correctAnswers") || [];
 
-  console.log("Loaded correctAnswers:", checkPassword);
-
   switch (navigation) {
     case "0127":
       if (checkPassword.includes("0127")) {
