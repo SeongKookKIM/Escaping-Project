@@ -159,7 +159,9 @@ function Room() {
   return (
     <div className={style.room}>
       <Header backBtn={true} />
-      <p>비어있습니다.</p>
+      <div className={style.roomContentBox}>
+        <p className={style.roomDefaultText}>올바른 경로가 아닙니다.</p>
+      </div>
     </div>
   );
 }

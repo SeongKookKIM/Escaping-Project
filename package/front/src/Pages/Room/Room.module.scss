@@ -67,6 +67,15 @@
       line-height: 1.5;
       cursor: pointer;
     }
+    .roomDefaultText {
+      font-size: $fontSize;
+      pointer-events: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      color: red;
+    }
   }
   .roomHint {
     display: block;
