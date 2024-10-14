@@ -3,35 +3,35 @@ import style from "./Escape.module.scss";
 
 function Escape() {
   // 공유하기 버튼
-  const handlerShare = () => {
+  const handlerShare = async () => {
     const shareUrl = "http://localhost:5173/";
-    if (navigator.share) {
-      navigator
-        .share({
-          title: "방 탈출 게임에 도전하세요!",
-          text: "저는 방 탈출에 성공했습니다! 당신도 도전해 보세요! 😎💡",
-          url: shareUrl,
-        })
-        .then(() => console.log("공유 성공"))
-        .catch((error) => {
-          console.log("공유 실패", error);
-          shareClipboard(shareUrl);
-        });
-    } else {
-      shareClipboard(shareUrl);
+    const shareData = {
+      title: "방 탈출 게임에 도전하세요!",
+      text: "저는 방 탈출에 성공했습니다! 당신도 도전해 보세요! 😎💡",
+      url: shareUrl,
+    };
+
+    try {
+      if (navigator.share) {
+        await navigator.share(shareData);
+        console.log("공유 성공");
+      } else {
+        await shareClipboard(shareUrl);
+      }
+    } catch (error) {
+      console.error("공유 실패", error);
+      await shareClipboard(shareUrl);
     }
   };
 
   // Web Share API를 지원하지 않는 경우 또는 실패할 경우
-  const shareClipboard = (shareUrl: string) => {
-    navigator.clipboard
-      .writeText(shareUrl)
-      .then(() => alert("링크가 복사되었습니다! 지인과 공유해보세요."))
-      .catch((error) =>
-        alert(
-          `${error}: 링크 복사에 실패했습니다. 다른 방법으로 공유해 주세요.`
-        )
-      );
+  const shareClipboard = async (shareUrl: string) => {
+    try {
+      await navigator.clipboard.writeText(shareUrl);
+      alert("링크가 복사되었습니다! 지인과 공유해보세요.");
+    } catch (error) {
+      alert(`${error}: 링크 복사에 실패했습니다. 다른 방법으로 공유해 주세요.`);
+    }
   };
 
   return (
