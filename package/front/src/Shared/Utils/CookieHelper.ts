@@ -9,8 +9,6 @@ const saveCookie = (name: string, value: string, expireMin: number) => {
     expires,
     secure: true,
   });
-
-  console.log("쿠키저장");
 };
 
 // Cookie 삭제
