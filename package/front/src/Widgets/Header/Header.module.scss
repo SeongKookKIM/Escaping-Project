@@ -31,4 +31,14 @@
     cursor: pointer;
     color: black;
   }
+
+  .retryBtn {
+    background-color: white;
+    border: none;
+    font-size: $fontSize;
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+    color: black;
+  }
 }

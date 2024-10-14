@@ -1,9 +1,15 @@
 import style from "./Header.module.scss";
 import { HeaderProps } from "../../Entries/HeaderNavigation/HeaderModel";
 import { useNavigate } from "react-router-dom";
+import { removeData } from "../../Shared/Utils/LocalStorageHelpers";
 
-function Header({ backBtn, homeBtn }: HeaderProps) {
+function Header({ backBtn, homeBtn, retryBtn }: HeaderProps) {
   const navigate = useNavigate();
+
+  const handlerRetry = () => {
+    removeData("correctAnswers");
+    navigate("/");
+  };
 
   return (
     <div className={style.header}>
@@ -25,6 +31,16 @@ function Header({ backBtn, homeBtn }: HeaderProps) {
           onClick={() => navigate("/")}
         >
           ← Home
+        </button>
+      )}
+
+      {retryBtn && (
+        <button
+          type="button"
+          className={style.retryBtn}
+          onClick={() => handlerRetry()}
+        >
+          다시하기
         </button>
       )}
     </div>
