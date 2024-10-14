@@ -2,7 +2,7 @@ import style from "./Header.module.scss";
 import { HeaderProps } from "../../Entries/HeaderNavigation/HeaderModel";
 import { useNavigate } from "react-router-dom";
 
-function Header({ backBtn }: HeaderProps) {
+function Header({ backBtn, homeBtn }: HeaderProps) {
   const navigate = useNavigate();
 
   return (
@@ -11,12 +11,22 @@ function Header({ backBtn }: HeaderProps) {
         <button
           type="button"
           className={style.backBtn}
-          onClick={() => navigate(-1)}
+          onClick={() => navigate("/rooms")}
         >
-          ← Back
+          ← Rooms
         </button>
       )}
       <h3>@Escaping</h3>
+
+      {homeBtn && (
+        <button
+          type="button"
+          className={style.homeBtn}
+          onClick={() => navigate("/")}
+        >
+          ← Home
+        </button>
+      )}
     </div>
   );
 }

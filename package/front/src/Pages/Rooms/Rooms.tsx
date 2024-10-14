@@ -26,7 +26,14 @@ function Rooms() {
     setRooms(roomsModel);
 
     const saved: string[] = loadData("correctAnswers") || [];
-    setSavedAnswers(saved);
+
+    // 네비게이션 확인
+    if (saved.includes("0127")) {
+      setSavedAnswers(saved);
+    } else {
+      alert("올바른 경로가 아닙니다.");
+      navigate(-1);
+    }
 
     deleteCookie("Room5_question");
     deleteCookie("Room5_hint");
@@ -34,7 +41,7 @@ function Rooms() {
 
   return (
     <div className={style.rooms}>
-      <Header backBtn={false} />
+      <Header backBtn={false} homeBtn={true} />
       <div className={style.roomsContainer}>
         {rooms.map((room: wordsType, idx: number) => {
           const roomImages = [room1, room2, room3, room4, room5, room6, room7];

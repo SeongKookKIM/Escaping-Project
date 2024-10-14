@@ -93,10 +93,12 @@
   .roomSixHintVisible {
     opacity: 1;
     transition: opacity 1s;
+    display: block;
   }
 
   .roomSixHintHidden {
     opacity: 0;
     transition: opacity 1s;
+    display: none;
   }
 }

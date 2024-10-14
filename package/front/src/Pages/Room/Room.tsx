@@ -1,22 +1,40 @@
 import style from "./Room.module.scss";
 import Header from "../../Widgets/Header/Header";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { roomInfo, roomType } from "../../Entries/Room/RoomModel";
+import { roomModel, roomType } from "../../Entries/Room/RoomModel";
 import { saveCookie } from "../../Shared/Utils/CookieHelper";
+import { checkPasswordMiddleware } from "../../Shared/Utils/MiddleWare";
+import { loadData } from "../../Shared/Utils/LocalStorageHelpers";
 
 function Room() {
   const { id: roomId } = useParams();
   const [roomData, setRoomData] = useState<roomType | undefined>();
-
   const [roomThreeShow, setRoomThreeShow] = useState<boolean>(false);
   const [roomFourShow, setRoomFourShow] = useState<boolean>(false);
   const [roomSixShow, setRoomSixShow] = useState<boolean>(false);
 
+  const naviage = useNavigate();
+
   useEffect(() => {
-    const findRoom = roomInfo.find((room) => room.id === roomId);
+    const findRoom = roomModel.find((room) => room.id === roomId);
     setRoomData(findRoom);
 
+    const saved: string[] = loadData("correctAnswers") || [];
+
+    // Room1 경로 체크
+    if (roomId === "room1") {
+      if (!saved.includes("0127")) {
+        alert("올바른 경로가 아닙니다.");
+        naviage(-1);
+      }
+    }
+    // Room1 제외한 다른 경로들
+    if (findRoom?.answer) {
+      checkPasswordMiddleware(findRoom?.answer, naviage);
+    }
+
+    // Room5 질문 생성
     if (roomId === "room5") {
       saveCookie("Room5_question", findRoom?.content ?? "", 10);
       saveCookie(

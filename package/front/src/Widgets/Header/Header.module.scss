@@ -21,4 +21,14 @@
     font-size: $fontSize;
     pointer-events: none;
   }
+
+  .homeBtn {
+    background-color: white;
+    border: none;
+    font-size: $fontSize;
+    position: absolute;
+    left: 20px;
+    cursor: pointer;
+    color: black;
+  }
 }

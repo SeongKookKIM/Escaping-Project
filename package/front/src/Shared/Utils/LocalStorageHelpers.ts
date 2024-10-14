@@ -6,7 +6,7 @@ const saveData = (key: string, value: string[]) => {
 // 데이터 읽기
 const loadData = (key: string) => {
   const data = localStorage.getItem(key);
-  return data ? JSON.parse(data) : null;
+  return data ? JSON.parse(data) : [];
 };
 
 // 데이터 수정
