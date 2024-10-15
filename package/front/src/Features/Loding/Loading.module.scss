@@ -1,0 +1,11 @@
+@import "../../Shared/Style/flex.scss";
+@import "../../Shared/Style/font.scss";
+
+.loading {
+  width: 100%;
+  height: 100vh;
+  @include flexCenterH();
+  p {
+    font-size: $fontSize;
+  }
+}
