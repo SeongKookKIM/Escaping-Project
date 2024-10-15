@@ -6,13 +6,6 @@ import { roomsModel } from "../../Entries/Rooms/RoomsModel";
 import Answer from "../../Features/Answer/Answer";
 import { useNavigate } from "react-router-dom";
 
-import room1 from "../../assets/room1-bg.png";
-import room2 from "../../assets/room2-bg.png";
-import room3 from "../../assets/room3-bg.png";
-import room4 from "../../assets/room4-bg.png";
-import room5 from "../../assets/room5-bg.png";
-import room6 from "../../assets/room6-bg.png";
-import room7 from "../../assets/room7-bg.png";
 import { loadData } from "../../Shared/Utils/LocalStorageHelpers";
 import { deleteCookie } from "../../Shared/Utils/CookieHelper";
 
@@ -44,7 +37,15 @@ function Rooms() {
       <Header backBtn={false} homeBtn={true} />
       <div className={style.roomsContainer}>
         {rooms.map((room: wordsType, idx: number) => {
-          const roomImages = [room1, room2, room3, room4, room5, room6, room7];
+          const roomImages: string[] = [
+            "https://samescaping.s3.ap-northeast-2.amazonaws.com/room1-bg.png",
+            "https://samescaping.s3.ap-northeast-2.amazonaws.com/room2-bg.png",
+            "https://samescaping.s3.ap-northeast-2.amazonaws.com/room3-bg.png",
+            "https://samescaping.s3.ap-northeast-2.amazonaws.com/room4-bg.png",
+            "https://samescaping.s3.ap-northeast-2.amazonaws.com/room5-bg.png",
+            "https://samescaping.s3.ap-northeast-2.amazonaws.com/room6-bg.png",
+            "https://samescaping.s3.ap-northeast-2.amazonaws.com/room7-bg.png",
+          ];
           const isSolved = savedAnswers.includes(room.words);
 
           return (

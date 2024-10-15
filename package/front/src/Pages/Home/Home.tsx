@@ -1,5 +1,3 @@
-import Logo from "../../assets/Logo.png";
-import landingBg from "../../assets/Landing-bg.png";
 import style from "./Home.module.scss";
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
@@ -31,9 +29,17 @@ function Home() {
   return (
     <div className={style.home}>
       <p className={style.roomSixPassword}>react</p>
-      <img src={Logo} alt="Logo" className={style.logo} />
+      <img
+        src="https://samescaping.s3.ap-northeast-2.amazonaws.com/Logo.png"
+        alt="Logo"
+        className={style.logo}
+      />
       <div className={style.landingBgContainer}>
-        <img src={landingBg} alt="Landing-Bg" className={style.landingBg} />
+        <img
+          src="https://samescaping.s3.ap-northeast-2.amazonaws.com/Landing-bg.png"
+          alt="Landing-Bg"
+          className={style.landingBg}
+        />
         <p>
           당신은 디지털 요새라는 이름의 가상 세계에 갇히게 됩니다. <br />
           이 요새는 다양한 문제로 가득 차 있습니다. <br /> 요새를 탈출하고
