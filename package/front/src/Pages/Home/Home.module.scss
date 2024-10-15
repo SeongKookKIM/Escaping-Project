@@ -47,6 +47,12 @@
       font-weight: bold;
       pointer-events: none;
       line-height: 1.5;
+      span {
+        display: block;
+        font-weight: normal;
+        color: red;
+        margin-top: 10px;
+      }
     }
 
     &::before {
