@@ -4,7 +4,7 @@ import style from "./Escape.module.scss";
 function Escape() {
   // 공유하기 버튼
   const handlerShare = async () => {
-    const shareUrl = "http://localhost:5173/";
+    const shareUrl = "https://escaping-project-front.vercel.app/";
     const shareData = {
       title: "방 탈출 게임에 도전하세요!",
       text: "저는 방 탈출에 성공했습니다! 당신도 도전해 보세요! 😎💡",

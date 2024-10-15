@@ -20,10 +20,9 @@ describe("Home Component Test", () => {
       </MemoryRouter>
     );
   };
+  const user = userEvent.setup();
 
   test("correctAnswers에 0127이 포함되어 있으면 rooms 페이지로 이동", async () => {
-    const user = userEvent.setup();
-
     // localStorage에 correctAnswers 저장
     localStorage.setItem("correctAnswers", JSON.stringify(["0127"]));
 
@@ -37,8 +36,6 @@ describe("Home Component Test", () => {
   });
 
   test("correctAnswers에 0127이 포함되어 있지 않으면 admission 페이지로 이동", async () => {
-    const user = userEvent.setup();
-
     // localStorage에서 correctAnswers 제거
     localStorage.removeItem("correctAnswers");
 
