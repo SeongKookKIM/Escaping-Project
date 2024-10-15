@@ -26,9 +26,9 @@
   - TypeScript: 5.6.2
   - React: 18.3.1
 
-### 서버 설정 및 배포
+### 설정 및 배포
 
-- **서버 설치**: yarn install
+- **설치**: yarn install
 - **배포 환경**: Vercel
 
 <br/>
