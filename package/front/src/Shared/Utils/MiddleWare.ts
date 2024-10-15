@@ -2,7 +2,7 @@
 import { loadData } from "./LocalStorageHelpers";
 import { NavigateFunction } from "react-router-dom";
 
-export const checkPasswordMiddleware = (
+export const checkPasswordMiddleware = async (
   navigation: string | undefined,
   navigate: NavigateFunction
 ) => {
@@ -11,7 +11,10 @@ export const checkPasswordMiddleware = (
   switch (navigation) {
     case "0127":
       if (checkPassword.includes("0127")) {
-        alert("올바른 경로가 아닙니다.");
+        await new Promise<void>((resolve) => {
+          alert("비밀번호가 확인되었습니다. 다른 페이지로 이동합니다.");
+          resolve(); //
+        });
         navigate(-1);
       } else {
         console.log(
@@ -22,7 +25,10 @@ export const checkPasswordMiddleware = (
 
     default:
       if (!checkPassword.includes(navigation)) {
-        alert("올바른 경로가 아닙니다.");
+        await new Promise<void>((resolve) => {
+          alert("올바른 경로가 아닙니다.");
+          resolve();
+        });
         navigate(-1);
       }
       break;
