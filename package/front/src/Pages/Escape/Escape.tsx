@@ -12,12 +12,8 @@ function Escape() {
     };
 
     try {
-      if (navigator.share) {
-        await navigator.share(shareData);
-        console.log("공유 성공");
-      } else {
-        await shareClipboard(shareUrl);
-      }
+      await navigator.share(shareData);
+      console.log("공유 성공");
     } catch (error) {
       console.error("공유 실패", error);
       await shareClipboard(shareUrl);
