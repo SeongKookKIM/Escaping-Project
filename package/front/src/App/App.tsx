@@ -7,7 +7,7 @@ const Room = lazy(() => import("../Pages/Room/Room"));
 const Rooms = lazy(() => import("../Pages/Rooms/Rooms"));
 
 import "./App.scss";
-import Loading from "../Features/Loding/Loading";
+import Loading from "../Features/Loading/Loading";
 
 function App() {
   return (
